@@ -39,6 +39,6 @@ Large.args = {
 export const LongLabel = Template.bind({})
 LongLabel.args = {
   backgroundColor: "red",
-  label: "Press Me adsf asdf asdf asdfasdfasd fasd fasd fasd",
+  label: "This is a very looooooooooooong button ",
   size: "md",
 }

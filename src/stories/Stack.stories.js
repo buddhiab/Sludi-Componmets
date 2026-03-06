@@ -15,7 +15,9 @@ const Template = ({ numberOfChildren, ...args }) => (
         style={{
           width: "50px",
           height: "50px",
-          backgroundColor: "red",
+          backgroundColor: "green",
+          color: "white",
+          borderRadius: "0.25rem",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
