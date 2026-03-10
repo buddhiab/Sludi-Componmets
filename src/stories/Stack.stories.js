@@ -1,4 +1,6 @@
+import React from "react"
 import Stack from "../components/Stack"
+import Card from "../components/Card"
 
 export default {
   title: "Components/Stack",
@@ -11,18 +13,14 @@ export default {
 const Template = ({ numberOfChildren, ...args }) => (
   <Stack {...args}>
     {[...Array(numberOfChildren).keys()].map(n => (
-      <div
-        style={{
-          width: "50px",
-          height: "50px",
-          backgroundColor: "red",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {n + 1}
-      </div>
+      <Card
+        key={n}
+        title={`Example Card ${n + 1}`}
+        content="This card is being automatically laid out by your Stack component."
+        width="sm"
+        footerText="View Details"
+        interactive={true}
+      />
     ))}
   </Stack>
 )
@@ -30,14 +28,14 @@ const Template = ({ numberOfChildren, ...args }) => (
 export const Horizontal = Template.bind({})
 Horizontal.args = {
   direction: "row",
-  spacing: 2,
+  spacing: 4,
   wrap: false,
 }
 
 export const Vertical = Template.bind({})
 Vertical.args = {
   direction: "column",
-  spacing: 2,
+  spacing: 4,
   wrap: false,
 }
 
@@ -50,9 +48,9 @@ NoSpacing.args = {
 
 export const WrapOverflow = Template.bind({})
 WrapOverflow.args = {
-  numberOfChildren: 40,
+  numberOfChildren: 8,
   direction: "row",
-  spacing: 2,
+  spacing: 6,
   wrap: true,
 }
 
